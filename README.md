@@ -9,8 +9,8 @@ The project focuses on solving the common "over-segmentation" problem by filteri
 The project is organized into the following key files:
 
 * **Project_Report.pdf**: A comprehensive technical report explaining the mathematical theory of persistence applied to image segmentation and an analysis of the results.
-* **ESAME_PALLINE.R**: R script applied to a real-world case study (`PALLINE.jpg`). It demonstrates how persistence filters out noise and small reflections to correctly segment circular objects.
-* **ESAME_SINTETICO.R**: R script that generates a synthetic digital image. It provides a "controlled environment" to visualize how the algorithm handles peaks and valleys without external noise.
+* **watershed_real_image.R**: R script applied to a real-world case study (`palline.jpg`, a photo of balls). It demonstrates how persistence filters out noise and small reflections to correctly segment circular objects.
+* **watershed_synthetic.R**: R script that generates a synthetic digital image. It provides a "controlled environment" to visualize how the algorithm handles peaks and valleys without external noise.
 
 ## Core Concept
 
@@ -25,3 +25,10 @@ To run the scripts, ensure you have R installed along with the following package
 
 ```R
 install.packages(c("imager", "TDA", "magrittr"))
+```
+
+## How to run
+
+1. Install the packages above.
+2. Run `watershed_synthetic.R` to see the method on a synthetic image.
+3. Run `watershed_real_image.R`: a file dialog opens, select `palline.jpg` (or any image of your own).
